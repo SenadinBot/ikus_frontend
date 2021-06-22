@@ -1,0 +1,26 @@
+{
+  "name": "clean_project",
+  "version": "1.0.0",
+  "description": "Clean project for frontend using bootstrap 5",
+  "scripts": {
+    "gulp": "gulp",
+    "gulp-watch": "gulp watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SenadinBot/clean_project.git"
+  },
+  "author": "Senadin Botic",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/SenadinBot/clean_project/issues"
+  },
+  "homepage": "https://github.com/SenadinBot/clean_project#readme",
+  "devDependencies": {
+    "bootstrap": "^5.0.1",
+    "browser-sync": "^2.26.14",
+    "gulp": "^4.0.2",
+    "gulp-sass": "^4.1.0",
+    "sass": "^1.35.1"
+  }
+}
