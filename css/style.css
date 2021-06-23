@@ -9116,8 +9116,10 @@ body {
     bottom: -50px; }
     .testimonial-section .carousel-indicators button {
       border-radius: 100%;
-      width: 12px;
-      height: 12px; }
+      width: 14px;
+      height: 14px;
+      margin-left: 8px;
+      margin-right: 8px; }
     .testimonial-section .carousel-indicators .active {
       background-color: #00a0df; }
 
