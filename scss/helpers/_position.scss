@@ -26,3 +26,15 @@
     top: 50%;
     @include transform(translate(-50%,-50%));
 }
+
+@mixin absolute-v-centered {
+    position: absolute;
+    top: 50%;
+    @include transform(translateY(-50%));
+}
+
+@mixin absolute-h-centered {
+    position: absolute;
+    left: 50%;
+    @include transform(translateX(-50%));
+}

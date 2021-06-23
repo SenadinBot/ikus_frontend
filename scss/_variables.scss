@@ -1,21 +1,17 @@
 // Theme setup
 
-$primary:   #EA5D50;
-$secondary: #2C3F7C;
-$tertiary:  #F8D0CE;
-$success:   #00c468;
-$info:      #0B5540;
-$warning:   #F4B233;
-$danger:    #ff2e38;
-$light:     #F8F9FB;
-$dark:      #1E2024;
-$gray:      #9A9A9A;
-$lightgray: #363636;
-$white:     #ffffff;
-$black:     #000000;
-$secondgray: #EFF3FA;
-$primary-lighten: rgba(248, 208, 206, .66);
-$tertiary-lighten: rgba(248, 226, 225, .37);
+$primary:    #00a0df;
+$secondary:  #005dbe;
+$tertiary:   #F8D0CE;
+$success:    #00c468;
+$info:       #0B5540;
+$warning:    #F4B233;
+$danger:     #ff2e38;
+$light:      #ececec;
+$dark:       #1E2024;
+$gray:       #777777;
+$white:      #ffffff;
+$black:      #000000;
 
 $spacer: 1rem;
 
@@ -33,14 +29,50 @@ $theme-colors:(
     "light":      $light,
     "dark":       $dark,
     "gray":       $gray,
-    "lightgray":  $lightgray,
     "white":      $white,
     "black":      $black,
-    "secondgray": $secondgray,
-    "primary-lighten": $primary-lighten, 
-    "tertiary-lighten": $tertiary-lighten,
   ) 
 );
+
+$spacers: (
+  (
+    0: 0,
+    1: ($spacer * .25),
+    2: ($spacer * .5),
+    3: $spacer,
+    4: ($spacer * 1.5),
+    5: ($spacer * 2),
+    6: ($spacer * 4),
+    7: ($spacer * 6),
+    8: ($spacer * 8),
+    9: ($spacer * 10),
+    10: ($spacer * 12)
+  )
+);
+
+$grid-breakpoints: (
+  xs: 0,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px,
+  xxl: 1600px
+);
+
+$container-max-widths: (
+  sm: 540px,
+  md: 720px,
+  lg: 960px,
+  xl: 1140px,
+  xxl: 1340px
+);
+
+// Global
+
+$enable-caret:                      false;
+$enable-responsive-font-sizes:      true;
+$enable-transitions:                true;
+$enable-shadows:                    true;
 
 // Colors
 
