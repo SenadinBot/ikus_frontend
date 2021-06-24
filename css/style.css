@@ -9193,3 +9193,53 @@ body {
     background: #00a0df;
     width: 60px;
     z-index: 1; }
+
+.pricing {
+  position: relative;
+  text-align: center;
+  padding: 0px 28px 20px;
+  border: 1px solid #ececec;
+  height: 100%;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.125); }
+  .pricing .price-title {
+    background-color: #00a0df;
+    color: #ffffff;
+    font-size: 15px;
+    font-weight: 600;
+    padding: 9px 23px;
+    margin-bottom: 35px;
+    display: inline-block; }
+  .pricing .price span {
+    font-size: 2.1rem;
+    line-height: 1;
+    font-weight: 700; }
+    .pricing .price span sup {
+      font-size: 1.1rem; }
+  .pricing .price i {
+    display: block;
+    font-size: .875rem;
+    color: #777777; }
+  .pricing ul {
+    border-top: 1px dashed rgba(119, 119, 119, 0.5);
+    position: relative;
+    margin-top: 25px;
+    margin-bottom: 0;
+    display: inline-block;
+    padding: 20px 0 0 0;
+    list-style: none; }
+    .pricing ul li {
+      color: #777777;
+      font-size: .875rem;
+      padding-left: 20px;
+      margin-bottom: 8px;
+      display: block;
+      text-align: left;
+      position: relative; }
+      .pricing ul li:before {
+        position: absolute;
+        content: '\f054';
+        left: 0px;
+        top: 0px;
+        font-family: 'Font Awesome 5 Free';
+        font-weight: 600;
+        opacity: .4; }
