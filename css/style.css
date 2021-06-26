@@ -9255,3 +9255,26 @@ body {
 
 .feature .feature-items ul {
   list-style: none; }
+
+.funfact-section {
+  position: relative;
+  padding: 50px 0px 30px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-attachment: fixed; }
+  @media (min-width: 992px) {
+    .funfact-section {
+      padding: 70px 0px 60px; } }
+  .funfact-section:before {
+    content: '';
+    display: block;
+    background-color: rgba(0, 0, 0, 0.84);
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0; }
+  .funfact-section .funfact-item .fas {
+    color: #ffffff;
+    font-size: 2.7rem; }
