@@ -9159,10 +9159,10 @@ body {
 
 .section-intro div,
 .section-intro p {
-  font-style: italic; }
+  font-style: italic;
+  color: #777777; }
 
 .section-intro div {
-  color: #777777;
   margin-bottom: 10px;
   font-size: .875rem; }
 
@@ -9243,3 +9243,15 @@ body {
         font-family: 'Font Awesome 5 Free';
         font-weight: 600;
         opacity: .4; }
+
+.feature .feature-items h3, .feature .feature-items .h3 {
+  font-size: 1.125rem;
+  font-weight: 600; }
+
+.feature .feature-items p {
+  font-size: .875rem;
+  line-height: 1;
+  margin: 0; }
+
+.feature .feature-items ul {
+  list-style: none; }

@@ -43,10 +43,10 @@
     div,
     p {
         font-style: italic;
+        color: $gray;
     }
 
     div {
-        color: $gray;
         margin-bottom: 10px;
         font-size: .875rem;
     }
