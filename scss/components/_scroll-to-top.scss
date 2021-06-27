@@ -8,6 +8,10 @@
     height: 50px;
     background-color: $primary;
 
+    &:after {
+        display: none;
+    }
+
     i {
         font-size: 1.4rem;
         line-height: 1;
