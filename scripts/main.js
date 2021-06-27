@@ -1,5 +1,6 @@
 $(function () {
 
+    // Image Gallery
     $('.filtr-container').filterizr({
         animationDuration: 0.3,
         delayMode: 'progressive',
@@ -18,6 +19,23 @@ $(function () {
         gallery: {
             enabled: true
         }
+    });
+
+    // Scroll To Top
+    $('#toTopBtn').fadeOut();
+    $(window).on('scroll', function () {
+        if ($(this).scrollTop() > 40) {
+            $('#toTopBtn').fadeIn();
+        } else {
+            $('#toTopBtn').fadeOut();
+        }
+    });
+
+    $('#toTopBtn').on('click', function () {
+        $("html, body").animate({
+            scrollTop: 0
+        }, 10);
+        return false;
     });
 
 })
