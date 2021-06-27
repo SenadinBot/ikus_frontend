@@ -21,7 +21,7 @@
     &:before {
         content: '';
         display: block;
-        background-color: rgba($black, 0.84);
+        background-color: rgba($black, 0.6);
 
         @include absolute-cover;
     }

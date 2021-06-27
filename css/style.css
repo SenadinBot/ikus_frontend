@@ -9090,7 +9090,7 @@ body {
   .testimonial-section:before {
     content: '';
     display: block;
-    background-color: rgba(0, 0, 0, 0.84);
+    background-color: rgba(0, 0, 0, 0.6);
     position: absolute;
     width: 100%;
     height: 100%;
@@ -9269,7 +9269,7 @@ body {
   .funfact-section:before {
     content: '';
     display: block;
-    background-color: rgba(0, 0, 0, 0.84);
+    background-color: rgba(0, 0, 0, 0.6);
     position: absolute;
     width: 100%;
     height: 100%;
@@ -9278,3 +9278,31 @@ body {
   .funfact-section .funfact-item .fas {
     color: #ffffff;
     font-size: 2.7rem; }
+
+.latest-information .time-info {
+  border-bottom: 1px dashed rgba(119, 119, 119, 0.5);
+  padding-bottom: 10px;
+  margin-bottom: 20px; }
+  .latest-information .time-info h3, .latest-information .time-info .h3 {
+    font-size: 1rem; }
+  .latest-information .time-info ul {
+    position: relative;
+    margin: 0;
+    display: inline-block;
+    padding: 0 0 0 20px;
+    list-style: none; }
+    .latest-information .time-info ul li {
+      color: #777777;
+      padding-left: 20px;
+      margin-bottom: 8px;
+      display: block;
+      text-align: left;
+      position: relative; }
+      .latest-information .time-info ul li:before {
+        position: absolute;
+        content: '\f054';
+        left: 0px;
+        top: 0px;
+        font-family: 'Font Awesome 5 Free';
+        font-weight: 600;
+        opacity: .4; }
