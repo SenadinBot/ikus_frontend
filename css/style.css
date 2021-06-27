@@ -9351,20 +9351,16 @@ body {
 .image-gallery .filtr-container .filtr-item {
   padding-bottom: 24px;
   text-align: center;
-  overflow: hidden; }
-  @media (min-width: 576px) {
-    .image-gallery .filtr-container .filtr-item {
-      height: 198px; } }
+  overflow: hidden;
+  height: 198px; }
   .image-gallery .filtr-container .filtr-item img {
-    max-height: 100%;
+    height: 100%;
     width: 100%;
     object-fit: cover; }
   .image-gallery .filtr-container .filtr-item .image-popup {
     position: relative;
-    display: block; }
-    @media (min-width: 576px) {
-      .image-gallery .filtr-container .filtr-item .image-popup {
-        height: 174px; } }
+    display: block;
+    height: 174px; }
     .image-gallery .filtr-container .filtr-item .image-popup:before {
       content: "";
       background-color: #00a0df;

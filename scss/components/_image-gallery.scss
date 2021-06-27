@@ -63,15 +63,10 @@
             padding-bottom: 24px;
             text-align: center;
             overflow: hidden;
-            
-            @include media-breakpoint-up(sm) {
-                & {
-                    height: 198px;
-                }
-            }
+            height: 198px;
 
             img {
-                max-height: 100%;
+                height: 100%;
                 width: 100%;
                 object-fit: cover;
             }
@@ -79,12 +74,7 @@
             .image-popup {
                 position: relative;
                 display: block;
-
-                @include media-breakpoint-up(sm) {
-                    & {
-                        height: 174px;
-                    }
-                }
+                height: 174px;
 
                 &:before {
                     content: "";
