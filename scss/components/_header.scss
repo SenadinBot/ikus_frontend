@@ -1,0 +1,130 @@
+header {
+    .navbar {
+        position: absolute;
+        width: 100%;
+        background-color: rgba(34, 34, 34, .7);
+        z-index: 9;
+        padding: 0;
+        @include transition(all 500ms ease);    
+
+        a {
+            &:after {
+                display: none;
+            }
+        }
+
+        .navbar-nav {
+            > li {
+                margin-right: 30px;
+
+                > a {
+                    text-transform: uppercase;
+                    padding: 26px 0px;
+                    line-height: 30px;
+                    font-weight: 400;
+                    font-size: 1rem;
+                    color: $white;
+                    position: relative;
+
+                    &:before {
+                        content: "";
+                        position: absolute;
+                        width: 100%;
+                        height: 3px;
+                        bottom: 0;
+                        left: 0;
+                        visibility: hidden;
+                        transform: scaleX(0);
+                        background: $primary;
+                        @include transform(scaleX(0));
+                        @include transition(all 0.3s ease-in-out 0s);
+                    }
+
+                    &:hover {
+                        &:before {
+                            visibility: visible;
+                            transform: scaleX(1);
+                        }
+                    }
+                }
+
+                &.active {
+                    a {
+                        &:before {
+                            visibility: visible;
+                            transform: scaleX(1);
+                        }
+                    }
+                }
+
+                &:last-child {
+                    margin-right: 0;
+                }
+            }
+        }
+
+        .navbar-toggler {
+            position: absolute;
+            right: 15px;
+            top: 10px;
+        }
+
+        .navbar-brand {
+            padding: 8px 0;
+
+            img {
+                height: 56px;
+                @include transition(all .3s);
+            }
+        }
+    }
+}
+
+.nav-fixed {
+    header {
+        .navbar {
+            position: fixed;
+            background-color: $white;
+            left: 0px;
+            top: 0px;
+            width: 100%;
+            @include box-shadow-sm;
+
+            .navbar-nav {
+                > li {
+                    margin: 0;
+
+                    > a {
+                        padding: 15px;
+                        color: $dark;
+                        @include transition(all .3s);
+
+                        &:before {
+                            display: none;
+                        }
+
+                        &:hover {
+                            background: $primary;
+                            color: $white;
+                        }
+                    }
+    
+                    &.active {
+                        a {
+                            background: $primary;
+                            color: $white;
+                        }
+                    }
+                }
+            }
+
+            .navbar-brand {
+                padding: 5px 0;
+    
+                img {
+                    height: 44px;
+                }
+            }
+        }
+    }
+}

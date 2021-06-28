@@ -38,6 +38,39 @@ $(function () {
         return false;
     });
 
+    // AOS Init
+    AOS.init();
+
+    $('#heroBanner').on('slide.bs.carousel', function (e) {
+        $(".carousel-item-content span").removeClass('aos-animate');
+        $(".carousel-item-content h2").removeClass('aos-animate');
+        $(".carousel-item-content i").removeClass('aos-animate');
+        $(".carousel-item-content .btn").removeClass('aos-animate');
+
+        setTimeout(function () {
+            $(".carousel-item-content span").addClass('aos-animate');
+            $(".carousel-item-content h2").addClass('aos-animate');
+            $(".carousel-item-content i").addClass('aos-animate');
+            $(".carousel-item-content .btn").addClass('aos-animate');
+        }, 1);
+    });
+
+    // Adding Class on Scroll
+    $(window).on('load', function () {
+        var winOffset = document.documentElement.scrollTop || document.body.scrollTop;
+        if (winOffset > 1) {
+            $('body').addClass('nav-fixed');
+        }
+    });
+    $(window).on('scroll', function () {
+        var winOffset = document.documentElement.scrollTop || document.body.scrollTop;
+        if (winOffset > 1) {
+            $('body').addClass('nav-fixed');
+        } else {
+            $('body').removeClass('nav-fixed');
+        }
+    });
+
 })
 
 $(".counter").counter();

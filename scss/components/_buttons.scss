@@ -32,3 +32,26 @@ a {
     }
     
 }
+
+.btn {
+    font-weight: 500;
+    text-transform: uppercase;
+    @include transition(all .3s);
+
+    &:focus,
+    &:active,
+    &:hover {
+        @include transform(translateY(-3px));
+        @include box-shadow-lg();
+    }
+
+    &-primary {
+        color: $white;
+        
+        &:focus,
+        &:active,
+        &:hover {
+            color: $white;
+        }
+    }
+}
