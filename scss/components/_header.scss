@@ -14,8 +14,20 @@ header {
         }
 
         .navbar-nav {
+            @include media-breakpoint-down(lg) {
+                & {
+                    margin: 0;
+                    padding: 5px 0;
+                }
+            }
+
             > li {
-                margin-right: 30px;
+                @include media-breakpoint-up(lg) {
+                    & {
+                        margin-right: 30px;       
+                    }
+                }
+                
 
                 > a {
                     text-transform: uppercase;
@@ -25,6 +37,19 @@ header {
                     font-size: 1rem;
                     color: $white;
                     position: relative;
+
+                    @include media-breakpoint-down(lg) {
+                        & {
+                            padding: 3px 0px;
+                            display: block;
+                        }
+                    }
+
+                    @include media-breakpoint-only(md) {
+                        & {
+                            font-size: 1.1rem;
+                        }
+                    }
 
                     &:before {
                         content: "";
@@ -53,6 +78,18 @@ header {
                         &:before {
                             visibility: visible;
                             transform: scaleX(1);
+
+                            @include media-breakpoint-down(lg) {
+                                & {
+                                    display: none;
+                                }
+                            }
+                        }
+
+                        @include media-breakpoint-down(lg) {
+                            & {
+                                color: $primary;
+                            }
                         }
                     }
                 }
@@ -65,8 +102,41 @@ header {
 
         .navbar-toggler {
             position: absolute;
-            right: 15px;
-            top: 10px;
+            right: 12px;
+            padding: 0;
+            top: 24px;
+
+            @include media-breakpoint-only(md) {
+                & {
+                    top: 20px;
+                }
+            }
+            
+            &:focus {
+                box-shadow: none;
+            }
+
+            &:after {
+                content: '\f0c9';
+                display: block;
+                font-family: 'Font Awesome 5 Free';
+                font-weight: 600;
+                font-size: 1.5rem;
+                color: $primary;
+                @include short-transition;
+
+                @include media-breakpoint-only(md) {
+                    & {
+                        font-size: 2rem;
+                    }
+                }
+            }
+
+            &[aria-expanded="true"] {
+                &:after {
+                    content: '\f00d';
+                }
+            }
         }
 
         .navbar-brand {
@@ -75,6 +145,262 @@ header {
             img {
                 height: 56px;
                 @include transition(all .3s);
+            }
+        }
+
+        .fa-search {
+            color: $primary;
+            position: relative;
+            top: 4px;
+            cursor: pointer;
+            @include transition(all 0.3s);
+
+            &:hover {
+                opacity: .8;
+            }
+        }
+
+        .header-search-toggle {
+            @include media-breakpoint-down(lg) {
+                & {
+                    position: absolute;
+                    right: 55px;
+                    top: 29px;
+                    @include short-transition;
+                }
+            }
+
+            @include media-breakpoint-only(md) {
+                & {
+                    font-size: 1.3rem;
+                    right: 65px;
+                    top: 28px;
+                }
+            }
+        }
+
+        .language {
+            @include media-breakpoint-down(lg) {
+                & {
+                    position: absolute;
+                    right: 80px;
+                    top: 25px;
+                    @include short-transition;
+                }
+            }
+
+            @include media-breakpoint-only(md) {
+                & {
+                    top: 24px;
+                    right: 100px;
+                }
+            }
+
+            .dropdown-toggle {
+                @include media-breakpoint-down(lg) {
+                    & {
+                        color: $primary;
+                    }
+                }
+
+                @include media-breakpoint-only(md) {
+                    & {
+                        font-size: 1.2rem;
+                    }
+                }
+            }
+
+            ul {
+                @include media-breakpoint-down(lg) {
+                    & {
+                        top: 45px !important;
+                        left: -31px !important;
+                        padding: 0;
+                    }
+                }
+            }
+        }
+    }
+
+    .header-link {
+        i {
+            color: $white;
+            font-size: 1rem;
+            position: relative;
+            top: 1px;
+            padding-right: 5px;
+
+            @include media-breakpoint-down(lg) {
+                & {
+                    color: $primary;
+                }
+            }
+        }
+
+        a {
+            font-weight: 600;
+            font-size: 1rem;
+            letter-spacing: .1px;
+
+            &:after {
+                background: $white;
+                visibility: hidden;
+                @include transform(scaleX(0));
+            }
+
+            @include media-breakpoint-down(lg) {
+                & {
+                    color: $white;
+                }
+            }
+
+            &:hover {
+                &:after {
+                    visibility: visible;
+                    @include transform(scaleX(1));
+                }
+            }
+        }
+    }
+
+    .mobile-information  {
+        ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+
+            li {
+                margin-bottom: 15px;
+            }
+        }
+    }
+
+    .header-social {
+        top: 2px;
+
+        a {
+            font-size: 1.4rem;
+            line-height: 1;
+            position: relative;
+            top: 0;
+            @include transition(top 0.3s);
+
+            &:hover {
+                top: -3px;
+            }
+
+        }
+    }
+
+    .top-nav-container {
+        background-color: $primary;
+        padding: 9px 0px;
+        text-align: right;
+        @include transition(all 0.3s);
+
+        @include media-breakpoint-down(lg) {
+            & {
+                display: none;
+            }
+        }
+
+        a {
+            color: $white;
+        }
+
+        ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+
+            li {
+                display: inline-block;
+                margin-bottom: 0;
+                padding-right: 14px;
+                margin-right: 14px;
+                position: relative;
+
+                &:after {
+                    content: "";
+                    position: absolute;
+                    top: 0;
+                    right: 0;
+                    background: $white;
+                    height: 24px;
+                    width: 1px;
+                }
+
+                &:last-child {
+                    padding: 0;
+                    margin: 0;
+                    &:after {
+                        display: none;
+                    }
+                }
+            }
+        }
+
+    }
+
+    .language {
+        .fas {
+            margin-left: 5px;
+            @include transition(all 0.3s);
+        }
+
+        .dropdown-toggle {
+            font-weight: 600;
+            border: none;
+            background: transparent;
+            color: $white;
+
+            span {
+                width: 2ch;
+                overflow: hidden;
+                white-space: nowrap;
+                display: inline-flex;
+                text-transform: uppercase;
+            }
+
+            &:hover {
+                .fas {
+                    @include transform(rotate(-180deg));
+                }
+            }
+        }
+
+        ul {
+            background: $primary;
+            top: 7px !important;
+
+            li {
+                border-bottom: 1px solid $white;
+                margin-right: 0;
+                padding-right: 0;
+                width: 100%;
+
+                &:last-child {
+                    border-bottom: none;
+                }
+
+                &:after {
+                    display: none
+                }
+
+                a {
+                    padding: 12px 20px;
+                    color: $white;
+                    @include transition(all 0.3s);
+
+                    &:before {
+                        display: none;
+                    }
+
+                    &:hover {
+                        background: transparent;
+                    }
+                }
             }
         }
     }
@@ -107,12 +433,25 @@ header {
                             background: $primary;
                             color: $white;
                         }
+
+                        @include media-breakpoint-down(lg) {
+                            & {
+                                padding: 3px 0px;
+                            }
+                        }
                     }
     
                     &.active {
                         a {
                             background: $primary;
                             color: $white;
+
+                            @include media-breakpoint-down(lg) {
+                                & {
+                                    background: transparent;
+                                    color: $primary;
+                                }
+                            }
                         }
                     }
                 }
@@ -125,6 +464,78 @@ header {
                     height: 44px;
                 }
             }
+
+            .navbar-toggler {
+                top: 15px;
+
+                @include media-breakpoint-only(md) {
+                    & {
+                        top: 11px;
+                    }
+                }
+            }
+
+            .header-search-toggle {
+                @include media-breakpoint-down(lg) {
+                    & {
+                        top: 21px;
+                    }
+                }
+    
+                @include media-breakpoint-only(md) {
+                    & {
+                        top: 19px;
+                    }
+                }
+            }
+    
+            .language {
+                @include media-breakpoint-down(lg) {
+                    & {
+                        top: 18px;
+                    }
+                }
+
+                @include media-breakpoint-only(md) {
+                    & {
+                        top: 15px;
+                    }
+                }
+
+                ul {
+                    @include media-breakpoint-down(lg) {
+                        & {
+                            top: 34px !important;
+                        }
+                    }
+
+                    @include media-breakpoint-only(md) {
+                        & {
+                            top: 37px !important;
+                        }
+                    }
+                }
+            }
         }
+
+        .header-link {
+            a {
+
+                @include media-breakpoint-down(lg) {
+                    & {
+                        color: $dark;
+                    }
+                }
+            }
+        }
+    }
+
+    .top-nav-container {
+        height: 0;
+        visibility: hidden;
+        opacity: 0;
+        position: absolute;
+        padding: 0;
+        top: -1000px;
     }
 }
