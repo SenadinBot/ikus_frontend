@@ -211,27 +211,9 @@ header {
                     color: $white;
                     @include short-transition;
 
-                    &:hover {
-                        
-                    }
-
                     &:not(:last-child) {
                         margin-bottom: 10px;
                     }
-
-                    // &:after {
-                    //     display: none;
-                    // }
-
-                    // @include media-xs {
-                    //     padding: 15px 20px;
-                    //     margin-bottom: 0;
-                    // }
-
-                    // @include media-sm {
-                    //     padding: 15px 20px;
-                    //     margin-bottom: 0;
-                    // }
                 }
             }
         }
