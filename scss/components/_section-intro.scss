@@ -27,6 +27,24 @@
         }
     }
 
+    &.white {
+        div {
+            color: rgba($white, .8);
+        }
+
+        p {
+            color: $white;
+        }
+
+        h2 {
+            color: $white;
+
+            &:before {
+                background-color: $white;
+            }
+        }
+    }
+
     @include media-breakpoint-down(md) {
         & {
             text-align: center;

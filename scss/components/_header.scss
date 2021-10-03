@@ -545,15 +545,6 @@ header {
                     color: $dark;
                     @include transition(all .3s);
 
-                    &:before {
-                        display: none;
-                    }
-
-                    &:hover {
-                        background: $primary;
-                        color: $white;
-                    }
-
                     @include media-breakpoint-down(lg) {
                         & {
                             padding: 3px 0px;
@@ -563,9 +554,6 @@ header {
 
                 &.active {
                     a {
-                        background: $primary;
-                        color: $white;
-
                         @include media-breakpoint-down(lg) {
                             & {
                                 background: transparent;
