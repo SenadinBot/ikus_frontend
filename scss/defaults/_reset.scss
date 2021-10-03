@@ -2,3 +2,9 @@ body {
     background-color: $body-bg;
     font-family: $font-family-body;
 }
+
+main {
+    &.pages-main {
+        padding-top: 54px;
+    }
+}

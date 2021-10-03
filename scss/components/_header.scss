@@ -48,12 +48,6 @@ header {
                 position: relative;
 
                 &:not(:last-child) {
-                    @include media-breakpoint-up(lg) {
-                        & {
-                            padding-right: 30px;       
-                        }
-                    }
-
                     @include media-breakpoint-down(lg) {
                         & {
                             border-bottom: 1px solid $light;   
@@ -64,7 +58,7 @@ header {
                 
                 > a {
                     text-transform: uppercase;
-                    padding: 26px 0px;
+                    padding: 26px 15px;
                     line-height: 30px;
                     font-weight: 400;
                     font-size: 1rem;
@@ -130,7 +124,11 @@ header {
                 }
 
                 &:last-child {
-                    margin-right: 0;
+                    @include media-breakpoint-up(lg) {
+                        & {
+                            margin-left: 20px;
+                        }
+                    }
                 }
 
                 &:hover {
@@ -160,7 +158,7 @@ header {
             .fa-arrow-right {
                 display: none;
                 position: absolute;
-                right: 25px;
+                right: 5px;
                 top: 20px;
                 width: auto;
                 height: auto;
@@ -213,6 +211,14 @@ header {
 
                     &:not(:last-child) {
                         margin-bottom: 10px;
+                    }
+
+                    @include media-breakpoint-up(lg) {
+                        & {
+                            &:hover {
+                                color: rgba($dark, .8);
+                            }
+                        }
                     }
                 }
             }
@@ -269,7 +275,7 @@ header {
         .fa-search {
             color: $primary;
             position: relative;
-            top: 4px;
+            top: 7px;
             cursor: pointer;
             @include transition(all 0.3s);
 
@@ -524,144 +530,148 @@ header {
     }
 }
 
-.nav-fixed {
-    header {
-        .navbar {
-            position: fixed;
-            background-color: $white;
-            left: 0px;
-            top: 0px;
-            width: 100%;
-            @include box-shadow-sm;
+.nav-fixed,
+.pages-header {
+    .navbar {
+        background-color: $white;
+        @include box-shadow-sm;
 
-            .navbar-nav {
-                > li {
-                    margin: 0;
+        .navbar-nav {
+            > li {
+                margin: 0;
 
-                    > a {
-                        padding: 15px;
-                        color: $dark;
-                        @include transition(all .3s);
+                > a {
+                    padding: 16px 15px;
+                    color: $dark;
+                    @include transition(all .3s);
 
-                        &:before {
-                            display: none;
+                    &:before {
+                        display: none;
+                    }
+
+                    &:hover {
+                        background: $primary;
+                        color: $white;
+                    }
+
+                    @include media-breakpoint-down(lg) {
+                        & {
+                            padding: 3px 0px;
                         }
+                    }   
+                }
 
-                        &:hover {
-                            background: $primary;
-                            color: $white;
-                        }
+                &.active {
+                    a {
+                        background: $primary;
+                        color: $white;
 
                         @include media-breakpoint-down(lg) {
                             & {
-                                padding: 3px 0px;
-                            }
-                        }   
-                    }
-    
-                    &.active {
-                        a {
-                            background: $primary;
-                            color: $white;
-
-                            @include media-breakpoint-down(lg) {
-                                & {
-                                    background: transparent;
-                                    color: $primary;
-                                }
+                                background: transparent;
+                                color: $primary;
                             }
                         }
                     }
+                }
 
-                    .menu-dropdown {
-                        @include media-breakpoint-up(lg) {
+                .menu-dropdown {
+                    @include media-breakpoint-up(lg) {
+                        & {
+                            top: 42px;
+                        }
+                    }
+
+                    a {
+                        @include media-breakpoint-down(lg) {
                             & {
-                                top: 42px;
+                                color: $dark;    
                             }
-                        }
-
-                        a {
-                            @include media-breakpoint-down(lg) {
-                                & {
-                                    color: $dark;    
-                                }
-                            }
-                        }
-                    }
-                }
-            }
-
-            .navbar-brand {
-                padding: 5px 0;
-    
-                img {
-                    height: 44px;
-                }
-            }
-
-            .navbar-toggler {
-                top: 15px;
-
-                @include media-breakpoint-only(md) {
-                    & {
-                        top: 11px;
-                    }
-                }
-            }
-
-            .header-search-toggle {
-                @include media-breakpoint-down(lg) {
-                    & {
-                        top: 21px;
-                    }
-                }
-    
-                @include media-breakpoint-only(md) {
-                    & {
-                        top: 19px;
-                    }
-                }
-            }
-    
-            .language {
-                @include media-breakpoint-down(lg) {
-                    & {
-                        top: 18px;
-                    }
-                }
-
-                @include media-breakpoint-only(md) {
-                    & {
-                        top: 15px;
-                    }
-                }
-
-                ul {
-                    @include media-breakpoint-down(lg) {
-                        & {
-                            top: 34px !important;
-                        }
-                    }
-
-                    @include media-breakpoint-only(md) {
-                        & {
-                            top: 37px !important;
                         }
                     }
                 }
             }
         }
 
-        .header-link {
-            a {
+        .navbar-brand {
+            padding: 5px 0;
 
+            img {
+                height: 44px;
+            }
+        }
+
+        .navbar-toggler {
+            top: 15px;
+
+            @include media-breakpoint-only(md) {
+                & {
+                    top: 11px;
+                }
+            }
+        }
+
+        .header-search-toggle {
+            @include media-breakpoint-down(lg) {
+                & {
+                    top: 21px;
+                }
+            }
+
+            @include media-breakpoint-only(md) {
+                & {
+                    top: 19px;
+                }
+            }
+        }
+
+        .language {
+            @include media-breakpoint-down(lg) {
+                & {
+                    top: 18px;
+                }
+            }
+
+            @include media-breakpoint-only(md) {
+                & {
+                    top: 15px;
+                }
+            }
+
+            ul {
                 @include media-breakpoint-down(lg) {
                     & {
-                        color: $dark;
+                        top: 34px !important;
+                    }
+                }
+
+                @include media-breakpoint-only(md) {
+                    & {
+                        top: 37px !important;
                     }
                 }
             }
         }
+    }
+
+    .header-link {
+        a {
+
+            @include media-breakpoint-down(lg) {
+                & {
+                    color: $dark;
+                }
+            }
+        }
+    }
+}
+
+.nav-fixed {
+    .navbar {
+        position: fixed;
+        left: 0px;
+        top: 0px;
+        width: 100%;
     }
 
     .top-nav-container {
