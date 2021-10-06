@@ -45,9 +45,8 @@ a {
     &:focus,
     &:active,
     &:hover {
-        @include short-transition;
         @include transform(translateY(-3px));
-        @include box-shadow-lg();
+        // @include box-shadow-lg();
     }
 
     &-primary,

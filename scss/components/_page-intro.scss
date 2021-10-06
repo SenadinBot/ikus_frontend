@@ -32,11 +32,25 @@
         color: $white;
         text-transform: uppercase;
         position: relative;
-        letter-spacing: 4px;
+        letter-spacing: 2px;
 
         @include media-breakpoint-up(sm) {
             & {
                 font-size: 3rem;
+                letter-spacing: 4px;
+            }
+        }
+    }
+
+    p {
+        color: $white;
+        position: relative;
+        margin: 20px auto 0 auto;
+        width: 80%;
+
+        @include media-breakpoint-up(xl) {
+            & {
+                width: 50%;
             }
         }
     }

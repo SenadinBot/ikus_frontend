@@ -6,5 +6,11 @@ body {
 main {
     &.pages-main {
         padding-top: 54px;
+        overflow-x: hidden;
+    }
+
+    img {
+        max-width: 100%;
+        height: auto;
     }
 }
